@@ -425,7 +425,8 @@ class MyWatchFace : CanvasWatchFaceService() {
             val minuteHex = "%02X".format(mCalendar.get(Calendar.MINUTE))
             val secondHex = "%02X".format(mCalendar.get(Calendar.SECOND))
 
-
+            canvas.drawLine(mCenterX - 100, mCenterY - 50, mCenterX + 100, mCenterY - 50, mHourPaint)
+            canvas.drawLine(mCenterX - 100, mCenterY + 50, mCenterX + 100, mCenterY + 50, mHourPaint)
 
             if (!mAmbient) {
                 canvas.drawText("$hourHex:$minuteHex:$secondHex", mCenterX - 165, mCenterY + 35, mHourPaint)
